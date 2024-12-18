@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Tutoriels</title>
+</head>
+<body>
+    <style>
+           article img {
+            width: 64px;
+            height: 50px;
+            margin-right: 15px;
+            border-radius: 5px;
+            }
+            #search-bar {
+            width: 100%;
+            padding: 10px;margin-bottom: 20px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+    <input type="text" id="search-bar" placeholder="Rechercher des gadgets...">
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchBar = document.getElementById('search-bar');
+            const articles = document.querySelectorAll('article');
+
+            searchBar.addEventListener('input', function() {
+                const query = searchBar.value.toLowerCase();
+                articles.forEach(article => {
+                    const title = article.querySelector('h3').textContent.toLowerCase();
+                    if (title.includes(query)) {
+                        article.style.display = 'flex';
+                    } else {
+                        article.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+    <main style="padding:20px;max-width:800px;margin: 0 auto;">
+        <section id="tutorials" style="margin-bottom:30px;">
+            <h2 style="color:#0073e6;border-bottom:2px solid #0073e6;padding-bottom:5px;margin-bottom: 15px;">Tutoriels</h2>
+            <article style="background-color:white;padding:15px;margin-bottom:15px;border-radius:8px;box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);display:flex;align-items: center;">
+                <img src="g docs.png" alt="Google Docs">
+                <div>
+                    <h3>Comment Utiliser Google Docs pour les Projets Scolaires</h3>
+                    <p>Google Docs est un outil puissant pour collaborer sur des projets scolaires...</p>
+                </div>
+            </article>
+            <article style="background-color:white;padding:15px;margin-bottom:15px;border-radius:8px;box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);display:flex;align-items: center;">
+                <img src="canva.png" alt="Canva">
+                <div>
+                    <h3>Créer des Présentations Impressionnantes avec Canva</h3>
+                    <p>Canva offre des modèles faciles à utiliser pour créer des présentations visuellement attrayantes...</p>
+                </div>
+            </article>
+            <article style="background-color:white;padding:15px;margin-bottom:15px;border-radius:8px;box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);display:flex;align-items: center;">
+                <img src="excel.png" alt="Excel">
+                <div>
+                    <h3>Maîtriser les Bases d'Excel pour la Gestion de Données</h3>
+                    <p>Excel est essentiel pour organiser et analyser des données efficacement...</p>
+                </div>
+            </article>
+            <article style="background-color:white;padding:15px;margin-bottom:15px;border-radius:8px;box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);display:flex;align-items: center;">
+                <img src="photoshop.png" alt="Photoshop">
+                <div>
+                    <h3>Retouche Photo Avancée avec Adobe Photoshop</h3>
+                    <p>Apprenez à utiliser Photoshop pour améliorer et retoucher vos photos comme un pro...</p></div>
+            </article>
+            <article style="background-color:white;padding:15px;margin-bottom:15px;border-radius:8px;box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);display:flex;align-items: center;">
+    <img src="wordpress.png" alt="WordPress">
+    <div>
+        <h3>Créer un Blog avec WordPress</h3>
+        <p>WordPress est une plateforme populaire pour créer et gérer des blogs...</p>
+    </div>
+</article>
+<article style="background-color:white;padding:15px;margin-bottom:15px;border-radius:8px;box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);display:flex;align-items: center;">
+    <img src="adobet.png" alt="Premiere Pro">
+    <div>
+        <h3>Montage Vidéo de Base avec Adobe Premiere Pro</h3>
+        <p>Découvrez comment monter vos vidéos avec Adobe Premiere Pro...</p>
+    </div>
+</article>
+<article style="background-color:white;padding:15px;margin-bottom:15px;border-radius:8px;box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);display:flex;align-items: center;">
+    <img src="tableau.png" alt="Tableau">
+    <div>
+        <h3>Utilisation de Tableau pour la Visualisation de Données</h3>
+        <p>Tableau est un outil puissant pour créer des visualisations de données interactives...</p>
+    </div>
+</article>
+<article style="background-color:white;padding:15px;margin-bottom:15px;border-radius:8px;box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);display:flex;align-items: center;">
+    <img src="trello.png" alt="Trello">
+    <div>
+        <h3>Gestion de Projets avec Trello</h3>
+        <p>Trello est un outil de gestion de projets visuel qui aide à organiser les tâches...</p>
+    </div>
+</article>
+<article style="background-color:white;padding:15px;margin-bottom:15px;border-radius:8px;box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);display:flex;align-items: center;">
+    <img src="musique.png" alt="GarageBand">
+    <div>
+        <h3>Création de Musique avec GarageBand</h3>
+        <p>GarageBand est un logiciel de création musicale facile à utiliser pour les débutants...</p>
+    </div>
+</article>
+<article style="background-color:white;padding:15px;margin-bottom:15px;border-radius:8px;box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);display:flex;align-items: center;">
+    <img src="numérique.png" alt="Photographie">
+    <div>
+        <h3>Introduction à la Photographie Numérique</h3>
+        <p>Apprenez les bases de la photographie numérique pour capturer de superbes images...</p>
+    </div>
+</article>
+<article style="background-color:white;padding:15px;margin-bottom:15px;border-radius:8px;box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);display:flex;align-items: center;">
+    <img src="illus.png" alt="Illustrator">
+    <div>
+        <h3>Conception Graphique avec Adobe Illustrator</h3>
+        <p>Illustrator est un outil puissant pour créer des illustrations vectorielles...</p>
+    </div>
+</article>
+<article style="background-color:white;padding:15px;margin-bottom:15px;border-radius:8px;box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);display:flex;align-items: center;">
+    <img src="seo.png" alt="SEO">
+    <div>
+        <h3>Optimisation du Référencement (SEO) pour les Débutants</h3>
+        <p>Découvrez les bases du SEO pour améliorer la visibilité de votre site web...</p>
+    </div>
+</article>
+<article style="background-color:white;padding:15px;margin-bottom:15px;border-radius:8px;box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);display:flex;align-items: center;">
+    <img src="youtube.png" alt="YouTube">
+    <div>
+        <h3>Création de Contenu Vidéo pour YouTube</h3>
+        <p>Apprenez à créer et éditer des vidéos engageantes pour votre chaîne YouTube...</p>
+    </div>
+</article>
+<article style="background-color:white;padding:15px;margin-bottom:15px;border-radius:8px;box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);display:flex;align-items: center;">
+    <img src="excel pro.png" alt="Finances">
+    <div>
+        <h3>Gestion des Finances Personnelles avec Excel</h3>
+        <p>Utilisez Excel pour suivre et gérer vos finances personnelles efficacement...</p>
+    </div>
+</article>
+        </section>
+    </main>
+</body>
+</html>
